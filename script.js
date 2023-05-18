@@ -33,5 +33,26 @@ function handleClick (event) {
 let squares=document.querySelectorAll(".square");
 squares.forEach(square=> {square.addEventListener("click", handleClick)})
 
+let form=document.querySelector("#form");
+form.addEventListener("submit", function () {
+    event.preventDefault();
+    let game=document.querySelector(".game");
+    game.style="";
+}
+)
+
+let restart=document.querySelector("#restart");
+restart.addEventListener("click", function (){
+    let game=document.querySelector(".game");
+    game.style.display="none";
+    document.querySelector("#play1").value="";
+    document.querySelector("#play2").value="";
+    gameBoard=["", "", "", "", "", "", "", "", ""];
+    render();
+
+
+})
+
+
 
 
